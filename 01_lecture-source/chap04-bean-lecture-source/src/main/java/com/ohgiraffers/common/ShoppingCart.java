@@ -7,16 +7,15 @@ public class ShoppingCart {
 
     private final List<Product> items;
 
-    public ShoppingCart(){
+    public ShoppingCart() {
         items = new ArrayList<>();
-
     }
 
-    public void addItem(Product item){
+    public void addItem(Product item) {
         items.add(item);
     }
 
-    public List<Product> getItem(){
+    public List<Product> getItem() {
         return items;
     }
 

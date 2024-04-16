@@ -11,28 +11,28 @@ public class MemberDAO {
 
     private final Map<Integer, MemberDTO> memberMap;
 
-    public  MemberDAO(){
+    public MemberDAO() {
         this.memberMap = new HashMap<>();
 
-        this.memberMap.put(1, new MemberDTO(1, "user01", "pass01", "꼬니"));
-        this.memberMap.put(1, new MemberDTO(2, "user02", "pass02", "고니"));
+        this.memberMap.put(1, new MemberDTO(1, "user01", "pass01", "홍길동"));
+        this.memberMap.put(2, new MemberDTO(2, "user02", "pass02", "홍동길"));
     }
 
-    public MemberDTO findMemberBySequence(int sequence){
+    public MemberDTO findMemberBySequence(int sequence) {
 
         return memberMap.get(sequence);
-
     }
 
-    public boolean save(MemberDTO member){
+    public boolean save(MemberDTO member) {
 
         int before = memberMap.size();
 
-        memberMap.put(member.getSequence(),member);
+        memberMap.put(member.getSequence(), member);
 
         int after = memberMap.size();
 
-        return after > before ? true : false;
+        return after > before? true : false;
+
     }
 
 }

@@ -11,11 +11,11 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ApplicationContext context =
+        ApplicationContext context  = 
                 new AnnotationConfigApplicationContext(ContextConfiguration.class);
-
+        
         String[] beanNames = context.getBeanDefinitionNames();
-        for (String bean : beanNames) {
+        for(String bean : beanNames) {
             System.out.println("bean = " + bean);
         }
 
@@ -35,9 +35,9 @@ public class Application {
 
         System.out.println("cart2 가지고 있는 상품 : " + cart2.getItem());
 
-        System.out.println("cart1 의 해쉬코드 : " + cart1.hashCode());
-        System.out.println("cart2 의 해쉬코드 : " + cart2.hashCode());
+        System.out.println("cart1 의 hashcode : " + cart1.hashCode());
+        System.out.println("cart2 의 hashcode : " + cart2.hashCode());
 
     }
-
+    
 }

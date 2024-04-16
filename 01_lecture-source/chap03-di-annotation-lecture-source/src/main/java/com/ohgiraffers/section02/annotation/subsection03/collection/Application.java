@@ -11,14 +11,13 @@ public class Application {
                 new AnnotationConfigApplicationContext("com.ohgiraffers.section02");
 
         String[] beanNames = context.getBeanDefinitionNames();
-        for(String bean : beanNames){
+        for(String bean : beanNames) {
             System.out.println(bean);
         }
 
         AnimalService animalService = context.getBean("animalCollection", AnimalService.class);
 
         animalService.animalEat();
-
     }
 
 }

@@ -8,5 +8,4 @@ public interface Account {
     String deposit(int money);
     /* 출금 */
     String withDraw(int money);
-
 }

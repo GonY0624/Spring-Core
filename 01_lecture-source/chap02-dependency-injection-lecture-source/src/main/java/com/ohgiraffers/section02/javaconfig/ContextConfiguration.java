@@ -10,22 +10,21 @@ import org.springframework.context.annotation.Configuration;
 public class ContextConfiguration {
 
     @Bean
-    public Account account(){
+    public Account account() {
 
-        return new PersonalAccount(10, "0104936-9948");
-
+        return new PersonalAccount(10, "123-12345-123123123");
     }
 
     @Bean
-    public MemberDTO member(){
-//
-//        /* 생성자를 통한 주입 */
-//        return new MemberDTO(1, "정고은", "010-4936-9948", "email", account());
+    public MemberDTO member() {
+
+        /* 생성자를 통한 주입 */
+//        return new MemberDTO(1, "조평훈", "010-5518-2290", "email", account());
 
         /* setter 주입 */
         MemberDTO member = new MemberDTO();
         member.setSequence(1);
-        member.setName("정고은");
+        member.setName("조평훈");
         member.setPhone("010");
         member.setEmail("123");
         member.setPersonalAccount(account());

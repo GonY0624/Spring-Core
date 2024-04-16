@@ -12,12 +12,12 @@ public class AnimalService {
     private List<Animal> animalList;
 
     @Autowired
-    public AnimalService(List<Animal> animalList){
+    public AnimalService(List<Animal> animalList) {
         this.animalList = animalList;
     }
 
-    public void animalEat(){
-        for(Animal animal : animalList){
+    public void animalEat() {
+        for(Animal animal : animalList) {
             animal.eat();
         }
     }

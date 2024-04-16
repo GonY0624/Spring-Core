@@ -8,7 +8,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ApplicationContext context =
+        ApplicationContext context = 
                 new GenericXmlApplicationContext("section01/xmlconfig/spring-context.xml");
 
         MemberDTO member = context.getBean(MemberDTO.class);
@@ -16,11 +16,12 @@ public class Application {
 //        System.out.println("member = " + member);
 
         System.out.println(member.getPersonalAccount());
-        System.out.println(member.getPersonalAccount().deposit(30000));
+        System.out.println(member.getPersonalAccount().deposit(10000));
         System.out.println(member.getPersonalAccount().getBalance());
-        System.out.println(member.getPersonalAccount().withDraw(20000));
+        System.out.println(member.getPersonalAccount().withDraw(5000));
+        System.out.println(member.getPersonalAccount().getBalance());
 
 
     }
-
+    
 }

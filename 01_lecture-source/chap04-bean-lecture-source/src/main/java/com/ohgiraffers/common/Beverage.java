@@ -3,7 +3,10 @@ package com.ohgiraffers.common;
 public class Beverage extends Product{
 
     private int capacity;
-    public Beverage(){}
+
+    public Beverage() {}
+
+
 
     public Beverage(String name, int price, int capacity) {
         super(name, price);
